@@ -1,3 +1,28 @@
+""" 
+Linked lists should be preferred over arrays when:
+- You know the data will grow and shrink frequently
+- You need constant-time insertions/deletions from the list (such as in real-time computing where time predictability is absolutely critical)
+- You don’t know how many items will be in the list. With arrays, you may need to re-declare and copy memory if the array grows too big
+- You don’t need random access to any elements
+- You want to be able to insert items in the middle of the list (such as a priority queue)
+
+Dynamic Size: Linked lists can grow or shrink dynamically without the need for preallocation or resizing.
+
+Constant-time Insertions/Deletions: Insertions and deletions at any position in a linked list can be done in constant time (O(1)) if you have a reference to the specific node.
+
+Memory Efficiency: Linked lists can be memory-efficient in scenarios where elements have varying sizes or when you want to avoid preallocating large memory blocks.
+
+No Wasted Space: Linked lists don't require preallocation, so you only use the memory needed for the elements you're actually storing.
+
+No Shifting Overhead: Inserting or deleting elements in a linked list doesn't require shifting other elements, making these operations efficient.
+
+Memory Fragmentation: Linked lists can help avoid memory fragmentation since elements can be allocated in non-contiguous memory locations.
+
+Flexibility: Linked lists are flexible for storing elements of different data types or for handling relationships between elements.
+
+Node Overhead: Linked lists have some overhead per node (for the data and the reference to the next node), which can make them less memory-efficient for storing individual small elements.
+"""
+
 class Node:
     def __init__(self,data):
         self.__data=data
